@@ -14,3 +14,4 @@
 - [x] Update to batch processing (fetch all URLs, single subagent call for all content)
 - [x] Fix file structure to use Claude Code conventions (`.claude/commands/` and `.claude/subagents/`)
 - [x] Add FxTwitter API support for Twitter/X URLs (bypasses JavaScript requirement)
+- [x] Add auto-generated Table of Contents with linked titles, types, and dates

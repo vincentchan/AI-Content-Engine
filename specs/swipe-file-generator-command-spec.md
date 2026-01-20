@@ -207,35 +207,37 @@ The master swipe file (`/swipe-file/swipe-file.md`) should be organized for easy
 > A collection of deconstructed high-performing content for study and recreation.
 
 ## Table of Contents
-- [Headlines & Hooks](#headlines--hooks)
-- [Article Structures](#article-structures)
-- [Psychological Patterns](#psychological-patterns)
-- [Content Templates](#content-templates)
-- [Analyzed Content](#analyzed-content)
 
-## Headlines & Hooks
-[Extracted headline formulas and opening hooks]
-
-## Article Structures
-[Common structural patterns identified]
-
-## Psychological Patterns
-[Recurring persuasion techniques]
-
-## Content Templates
-[Recreatable frameworks]
-
-## Analyzed Content
-[Individual content breakdowns, newest first]
+| # | Title | Type | Date |
+|---|-------|------|------|
+| 1 | [Content Title 1](#content-title-1) | article | 2026-01-19 |
+| 2 | [Content Title 2](#content-title-2) | tweet | 2026-01-18 |
 
 ---
 
-### [Content Title 1]
+## Content Title 1
 [Full analysis from content-deconstructor]
 
-### [Content Title 2]
+---
+
+## Content Title 2
 [Full analysis from content-deconstructor]
 ```
+
+### Table of Contents Auto-Generation
+
+The ToC is automatically generated/updated whenever the swipe file is modified:
+
+1. **Source:** Read titles from `.digested-urls.json` registry
+2. **Format:** Markdown table with columns: #, Title (linked), Type, Date
+3. **Order:** Most recent first (matches content order in file)
+4. **Links:** Title links to anchor (e.g., `[My Title](#my-title)`)
+
+**Anchor Generation Rules:**
+- Lowercase all characters
+- Replace spaces with hyphens
+- Remove special characters ($, ", ', (), etc.)
+- Example: `"How to make $10M"` → `#how-to-make-10m`
 
 ---
 

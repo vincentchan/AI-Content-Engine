@@ -3,41 +3,13 @@
 > A collection of deconstructed high-performing content for study and recreation.
 
 ## Table of Contents
-- [Headlines & Hooks](#headlines--hooks)
-- [Article Structures](#article-structures)
-- [Psychological Patterns](#psychological-patterns)
-- [Content Templates](#content-templates)
-- [Analyzed Content](#analyzed-content)
 
----
-
-## Headlines & Hooks
-
-*Extracted headline formulas and opening hooks will be compiled here as content is analyzed.*
-
----
-
-## Article Structures
-
-*Common structural patterns identified across analyzed content will be compiled here.*
-
----
-
-## Psychological Patterns
-
-*Recurring persuasion techniques and psychological triggers will be compiled here.*
-
----
-
-## Content Templates
-
-*Recreatable frameworks extracted from analyzed content will be compiled here.*
-
----
-
-## Analyzed Content
-
-*Individual content breakdowns appear below, newest first.*
+| # | Title | Type | Date |
+|---|-------|------|------|
+| 1 | [How to make $10M in 365 days with "AI mobile apps"](#how-to-make-10m-in-365-days-with-ai-mobile-apps) | tweet | 2026-01-19 |
+| 2 | [How to Fix Your Entire Life in 1 Day](#how-to-fix-your-entire-life-in-1-day) | article | 2026-01-19 |
+| 3 | [40 Life Lessons I Know at 40 (That I Wish I Knew at 20)](#40-life-lessons-i-know-at-40-that-i-wish-i-knew-at-20) | article | 2026-01-19 |
+| 4 | [How Duolingo Reignited User Growth](#how-duolingo-reignited-user-growth) | article | 2026-01-19 |
 
 ---
 

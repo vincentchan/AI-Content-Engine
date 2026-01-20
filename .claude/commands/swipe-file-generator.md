@@ -93,8 +93,47 @@ Extract the tweet content. Return: author name, handle, full tweet text, engagem
 ### Step 5: Update the Swipe File
 
 1. Read the existing `/swipe-file/swipe-file.md` (or create from template if it doesn't exist)
-2. Append all new content analyses to the "Analyzed Content" section (newest first)
-3. Write the updated swipe file
+2. **Generate/Update Table of Contents** (see below)
+3. Append all new content analyses after the ToC (newest first)
+4. Write the updated swipe file
+
+#### Table of Contents Auto-Generation
+
+The swipe file must have an auto-generated Table of Contents listing all analyzed content. This ToC must be updated every time the swipe file is modified.
+
+**ToC Structure:**
+```markdown
+## Table of Contents
+
+| # | Title | Type | Date |
+|---|-------|------|------|
+| 1 | [Content Title 1](#content-title-1) | article | 2026-01-19 |
+| 2 | [Content Title 2](#content-title-2) | tweet | 2026-01-19 |
+```
+
+**How to Generate:**
+1. Read the digested registry (`.digested-urls.json`) to get all content entries
+2. For each entry, create a table row with:
+   - Sequential number (1, 2, 3...)
+   - Title as markdown link (convert to anchor: lowercase, replace spaces with hyphens, remove special chars)
+   - Content type
+   - Date analyzed (from `digestedAt`)
+3. Order by most recent first (same order as content in the file)
+
+**Anchor Link Generation:**
+Convert title to anchor format:
+- `"How to make $10M in 365 days"` → `#how-to-make-10m-in-365-days`
+- `"40 Life Lessons I Know at 40"` → `#40-life-lessons-i-know-at-40`
+
+Rules:
+- Lowercase all characters
+- Replace spaces with hyphens
+- Remove special characters except hyphens
+- Remove dollar signs, quotes, parentheses, etc.
+
+**When to Update ToC:**
+- Always regenerate the full ToC when updating the swipe file
+- Include ALL entries from the digested registry, not just new ones
 
 ### Step 6: Report Summary
 
