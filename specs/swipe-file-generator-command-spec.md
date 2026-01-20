@@ -251,12 +251,45 @@ The master swipe file (`/swipe-file/swipe-file.md`) should be organized for easy
    - Handle paywalled or inaccessible content gracefully
    - Extract main content (strip navigation, ads, etc.)
 
-3. **State Persistence**
+3. **Twitter/X URL Handling**
+
+   Twitter/X URLs require JavaScript to render and cannot be fetched directly. Use the **FxTwitter API** instead.
+
+   **Detection:** URL contains `twitter.com` or `x.com`
+
+   **API Transformation:**
+   ```
+   Original: https://x.com/{username}/status/{id}
+   API URL:  https://api.fxtwitter.com/{username}/status/{id}
+
+   Original: https://twitter.com/{username}/status/{id}
+   API URL:  https://api.fxtwitter.com/{username}/status/{id}
+   ```
+
+   **API Features:**
+   - No authentication required
+   - Returns JSON with full tweet data
+   - Includes: text, author info, engagement metrics, media, quoted tweets
+   - No strict rate limits for reasonable use
+
+   **Response Fields:**
+   | Field | Description |
+   |-------|-------------|
+   | `tweet.text` | Full tweet text |
+   | `tweet.author.name` | Display name |
+   | `tweet.author.screen_name` | @handle |
+   | `tweet.likes` | Like count |
+   | `tweet.retweets` | Retweet count |
+   | `tweet.replies` | Reply count |
+   | `tweet.media` | Attached media array |
+   | `tweet.quote` | Quoted tweet object |
+
+4. **State Persistence**
    - Digested URLs registry must persist between sessions
    - Handle concurrent modifications safely
    - Backup mechanism for swipe file
 
-4. **Error Handling**
+5. **Error Handling**
    - Continue processing remaining URLs if one fails
    - Report failures to user with actionable information
    - Don't mark failed URLs as digested

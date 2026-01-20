@@ -13,3 +13,4 @@
 - [x] Update `CLAUDE.md` with project documentation
 - [x] Update to batch processing (fetch all URLs, single subagent call for all content)
 - [x] Fix file structure to use Claude Code conventions (`.claude/commands/` and `.claude/subagents/`)
+- [x] Add FxTwitter API support for Twitter/X URLs (bypasses JavaScript requirement)

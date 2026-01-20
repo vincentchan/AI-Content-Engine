@@ -26,11 +26,49 @@ You are a swipe file generator that analyzes high-performing content to study st
 
 ### Step 3: Fetch All New URLs (Batch)
 
-1. **Fetch all content in parallel** using WebFetch tool for each new URL
-2. **Track fetch results:**
+1. **Detect URL type and select fetch strategy:**
+   - **Twitter/X URLs:** Use FxTwitter API (see below)
+   - **All other URLs:** Use standard WebFetch
+
+2. **Fetch all content in parallel** using appropriate method for each URL
+3. **Track fetch results:**
    - Successfully fetched: Store URL and content for processing
    - Failed fetches: Log the URL and failure reason for reporting
-3. Continue only with successfully fetched content
+4. Continue only with successfully fetched content
+
+#### Twitter/X URL Handling
+
+Twitter/X URLs require special handling because they need JavaScript to render. Use the **FxTwitter API** instead:
+
+**Detection:** URL contains `twitter.com` or `x.com`
+
+**API Endpoint:** `https://api.fxtwitter.com/{username}/status/{tweet_id}`
+
+**Transform URL:**
+- Input: `https://x.com/gregisenberg/status/2012171244666253777`
+- API URL: `https://api.fxtwitter.com/gregisenberg/status/2012171244666253777`
+
+**Example transformation:**
+```
+Original: https://twitter.com/naval/status/1234567890
+API URL:  https://api.fxtwitter.com/naval/status/1234567890
+
+Original: https://x.com/paulg/status/9876543210
+API URL:  https://api.fxtwitter.com/paulg/status/9876543210
+```
+
+**API Response:** Returns JSON with:
+- `tweet.text` - Full tweet text
+- `tweet.author.name` - Display name
+- `tweet.author.screen_name` - Handle
+- `tweet.likes`, `tweet.retweets`, `tweet.replies` - Engagement metrics
+- `tweet.media` - Attached images/videos
+- `tweet.quote` - Quoted tweet if present
+
+**WebFetch prompt for Twitter:**
+```
+Extract the tweet content. Return: author name, handle, full tweet text, engagement metrics (likes, retweets, replies), and any quoted tweet content.
+```
 
 ### Step 4: Process All Content in Single Subagent Call
 
