@@ -95,6 +95,24 @@ A conversational creative thought partner that reveals hidden brilliance in your
 **Key Files:**
 - `/creative-thoughts/session-{timestamp}.md` - Session transcripts with breakthroughs
 
+### /tweet-ideas-generator
+
+Generates 60 high-impact tweet ideas from reference content across 5 categories.
+
+**Usage:** Run `/tweet-ideas-generator` to:
+1. Provide reference material (content drafts, newsletters, URLs, notes)
+2. Extract key takeaways and compelling concepts
+3. Generate 50 categorized statements across 5 categories (harsh advice, quotes, pain points, counterintuitive truths, key insights)
+4. Generate 10 creative wildcard tweets
+5. Save all 60 ideas with sources and explanations
+
+**Location:** `/.claude/commands/tweet-ideas-generator.md`
+
+**Output Folder:** `/tweet-ideas/`
+
+**Key Files:**
+- `/tweet-ideas/tweets-{timestamp}.md` - Generated tweet ideas
+
 ## Subagents
 
 ### content-deconstructor
@@ -156,7 +174,8 @@ Creates well-structured, verifiable prompts for content creation.
 │   │   ├── content-draft-generator.md
 │   │   ├── youtube-title-generator.md
 │   │   ├── content-ideas-generator.md
-│   │   └── creative-thought-partner.md
+│   │   ├── creative-thought-partner.md
+│   │   └── tweet-ideas-generator.md
 │   └── /subagents/
 │       ├── content-deconstructor.md
 │       ├── content-anatomy-generator.md
@@ -178,18 +197,22 @@ Creates well-structured, verifiable prompts for content creation.
 │   └── titles-{timestamp}.md
 ├── /creative-thoughts/                  # Creative thought partner sessions
 │   └── session-{timestamp}.md
+├── /tweet-ideas/                        # Tweet ideas generation
+│   └── tweets-{timestamp}.md
 ├── /specs/
 │   ├── swipe-file-generator-command-spec.md
 │   ├── content-draft-generator-command-spec.md
 │   ├── youtube-title-generator-command-spec.md
 │   ├── content-ideas-generator-command-spec.md
-│   └── creative-thought-partner-command-spec.md
+│   ├── creative-thought-partner-command-spec.md
+│   └── tweet-ideas-generator-command-spec.md
 └── /todos/
     ├── swipe-file-generator-implementation.md
     ├── content-draft-generator-implementation.md
     ├── youtube-title-generator-implementation.md
     ├── content-ideas-generator-implementation.md
-    └── creative-thought-partner-implementation.md
+    ├── creative-thought-partner-implementation.md
+    └── tweet-ideas-generator-implementation.md
 ```
 
 ## Key Files

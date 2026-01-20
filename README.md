@@ -10,7 +10,7 @@ I watched [this YouTube interview](https://www.youtube.com/watch?v=HhspudqFSvU&t
 
 So naturally, I did what any reasonable person would do: I turned it into a Claude Code project with slash commands and subagents so I could pretend I have Dan's content superpowers.
 
-## Credits (a.k.a. The People Who Actually Know What They're Doing)
+## Credits
 
 - **[Dan Koe](https://letters.thedankoe.com/)** — Created the framework. Wrote that [165M+ view Twitter thread](https://x.com/thedankoe/status/2010751592346030461). Probably writes better content before breakfast than most of us do all week.
 
@@ -48,6 +48,7 @@ Commands are organized by stage in the content creation process:
 |---------|--------------|
 | `/content-draft-generator` | Takes reference content, analyzes it, asks you context questions, then generates 3 variations of your new content |
 | `/youtube-title-generator` | Generates 30 YouTube title ideas from your content concept using proven formulas and psychological triggers |
+| `/tweet-ideas-generator` | Generates 60 high-impact tweet ideas from reference content across 5 categories (harsh advice, quotes, pain points, counterintuitive truths, key insights) |
 
 ## Getting Started
 
@@ -85,6 +86,12 @@ Commands are organized by stage in the content creation process:
    ```
    Describe your video concept and get 30 title options using proven formulas.
 
+   **Want 60 tweet ideas from your content?** Run:
+   ```
+   /tweet-ideas-generator
+   ```
+   Feed it any reference material and get 60 scroll-stopping tweet ideas organized by category.
+
 3. **Follow the prompts** — each command will ask for input and guide you through the process
 
 4. **Find your output** in the corresponding folder:
@@ -93,6 +100,7 @@ Commands are organized by stage in the content creation process:
    - `/content-ideas/` — Post outlines
    - `/content-draft/` — Generated drafts
    - `/youtube-title/` — Title ideas
+   - `/tweet-ideas/` — Tweet ideas
 
 ## Project Structure
 
@@ -106,6 +114,7 @@ Commands are organized by stage in the content creation process:
 ├── /content-ideas/         # Post outlines
 ├── /content-draft/         # Generated drafts
 ├── /youtube-title/         # Title ideas
+├── /tweet-ideas/           # Tweet ideas
 ├── /specs/                 # Command specifications
 └── /todos/                 # Implementation notes
 ```
