@@ -46,10 +46,31 @@ Commands are organized by stage in the content creation process:
 
 1. **Clone this repo** (or just copy the `.claude` folder structure)
 
-2. **Open in Claude Code** and run a command:
+2. **Open in Claude Code** and pick your starting point:
+
+   **Building a swipe file from scratch?** Start here:
    ```
    /swipe-file-generator
    ```
+   Add URLs to `/swipe-file/swipe-file-sources.md` and let it analyze high-performing content. Great for building your reference library over time.
+
+   **Have content you want to turn into social posts?** Run:
+   ```
+   /content-ideas-generator
+   ```
+   Feed it a newsletter, transcript, or notes. Get back 5 structured post outlines with hooks, paradoxes, and transformation arcs.
+
+   **Ready to write a full piece?** Use:
+   ```
+   /content-draft-generator
+   ```
+   Give it reference content to study, answer some context questions, and get 3 draft variations. The full pipeline.
+
+   **Just need a killer YouTube title?** Try:
+   ```
+   /youtube-title-generator
+   ```
+   Describe your video concept and get 30 title options using proven formulas.
 
 3. **Follow the prompts** — each command will ask for input and guide you through the process
 
