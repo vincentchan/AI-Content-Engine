@@ -2,7 +2,7 @@
 
 > Because staring at a blank page hoping for inspiration is so 2023.
 
-An AI-powered content creation system that helps you research, ideate, and draft content like a caffeinated content team of one. Built with Claude Code, slash commands, and subagents.
+An Claude Code powered content creation system that helps you research, ideate, and draft content like a caffeinated content team of one. Built with Claude Code, slash commands, and subagents.
 
 ## The Origin Story
 
@@ -26,6 +26,13 @@ This engine uses Claude Code's slash commands to run specialized content workflo
 
 Commands are organized by stage in the content creation process:
 
+#### Discovery Stage
+*"Find the genius you didn't know you had"*
+
+| Command | What It Does |
+|---------|--------------|
+| `/creative-thought-partner` | Conversational partner that reveals hidden brilliance in your ideas through paradox hunting, pattern spotting, and naming unnamed concepts |
+
 #### Research Stage
 *"Know thy audience, know thy swipe file"*
 
@@ -48,7 +55,13 @@ Commands are organized by stage in the content creation process:
 
 2. **Open in Claude Code** and pick your starting point:
 
-   **Building a swipe file from scratch?** Start here:
+   **Want to discover what makes your ideas unique?** Start here:
+   ```
+   /creative-thought-partner
+   ```
+   Have a conversation that digs into your methods, beliefs, and approaches. Walk away with named concepts and breakthrough insights you didn't know you had.
+
+   **Building a swipe file from scratch?** Run:
    ```
    /swipe-file-generator
    ```
@@ -75,6 +88,7 @@ Commands are organized by stage in the content creation process:
 3. **Follow the prompts** — each command will ask for input and guide you through the process
 
 4. **Find your output** in the corresponding folder:
+   - `/creative-thoughts/` — Session transcripts with breakthroughs
    - `/swipe-file/` — Your growing swipe file
    - `/content-ideas/` — Post outlines
    - `/content-draft/` — Generated drafts
@@ -87,6 +101,7 @@ Commands are organized by stage in the content creation process:
 ├── /.claude/
 │   ├── /commands/          # Slash commands live here
 │   └── /subagents/         # Specialized AI workers
+├── /creative-thoughts/     # Thought partner sessions
 ├── /swipe-file/            # Research output
 ├── /content-ideas/         # Post outlines
 ├── /content-draft/         # Generated drafts

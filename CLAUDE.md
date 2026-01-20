@@ -77,6 +77,24 @@ Generates structured post outlines from reference materials for wisdom-style soc
 **Key Files:**
 - `/content-ideas/ideas-{timestamp}.md` - Generated post outlines
 
+### /creative-thought-partner
+
+A conversational creative thought partner that reveals hidden brilliance in your ideas through critical observations and paradox hunting.
+
+**Usage:** Run `/creative-thought-partner` to:
+1. Share a topic or idea you want to explore
+2. Engage in guided conversation using four breakthrough drivers
+3. Discover paradoxes, patterns, and unnamed concepts in your thinking
+4. Crystallize and name your unique frameworks
+5. Export full session with narrative arc and transcript
+
+**Location:** `/.claude/commands/creative-thought-partner.md`
+
+**Output Folder:** `/creative-thoughts/`
+
+**Key Files:**
+- `/creative-thoughts/session-{timestamp}.md` - Session transcripts with breakthroughs
+
 ## Subagents
 
 ### content-deconstructor
@@ -137,7 +155,8 @@ Creates well-structured, verifiable prompts for content creation.
 │   │   ├── swipe-file-generator.md
 │   │   ├── content-draft-generator.md
 │   │   ├── youtube-title-generator.md
-│   │   └── content-ideas-generator.md
+│   │   ├── content-ideas-generator.md
+│   │   └── creative-thought-partner.md
 │   └── /subagents/
 │       ├── content-deconstructor.md
 │       ├── content-anatomy-generator.md
@@ -157,16 +176,20 @@ Creates well-structured, verifiable prompts for content creation.
 ├── /youtube-title/                      # YouTube title generation
 │   ├── reference-titles.md
 │   └── titles-{timestamp}.md
+├── /creative-thoughts/                  # Creative thought partner sessions
+│   └── session-{timestamp}.md
 ├── /specs/
 │   ├── swipe-file-generator-command-spec.md
 │   ├── content-draft-generator-command-spec.md
 │   ├── youtube-title-generator-command-spec.md
-│   └── content-ideas-generator-command-spec.md
+│   ├── content-ideas-generator-command-spec.md
+│   └── creative-thought-partner-command-spec.md
 └── /todos/
     ├── swipe-file-generator-implementation.md
     ├── content-draft-generator-implementation.md
     ├── youtube-title-generator-implementation.md
-    └── content-ideas-generator-implementation.md
+    ├── content-ideas-generator-implementation.md
+    └── creative-thought-partner-implementation.md
 ```
 
 ## Key Files
