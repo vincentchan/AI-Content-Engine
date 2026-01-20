@@ -41,6 +41,42 @@ Generates new content drafts based on reference content analysis.
 - `/content-meta-prompt/` - Generated meta prompts
 - `/content-draft/` - Final content draft variations
 
+### /youtube-title-generator
+
+Generates compelling YouTube title ideas from content concepts.
+
+**Usage:** Run `/youtube-title-generator` to:
+1. Provide a content idea, newsletter concept, or reference material
+2. Analyze input for transformation promise, value props, and audience benefits
+3. Generate 20 structured titles using proven formulas and psychological triggers
+4. Generate 10 creative titles based on direct response marketing principles
+5. Save all 30 titles with analysis to timestamped file
+
+**Location:** `/.claude/commands/youtube-title-generator.md`
+
+**Output Folder:** `/youtube-title/`
+
+**Key Files:**
+- `/youtube-title/reference-titles.md` - Editable reference examples (add your own)
+- `/youtube-title/titles-{timestamp}.md` - Generated title outputs
+
+### /content-ideas-generator
+
+Generates structured post outlines from reference materials for wisdom-style social posts.
+
+**Usage:** Run `/content-ideas-generator` to:
+1. Provide reference material (newsletters, scripts, notes, journal entries)
+2. Extract 5 distinct post concepts with paradoxes and transformation arcs
+3. Generate structured outlines with examples, objections, and actionable steps
+4. Save outlines to timestamped file
+
+**Location:** `/.claude/commands/content-ideas-generator.md`
+
+**Output Folder:** `/content-ideas/`
+
+**Key Files:**
+- `/content-ideas/ideas-{timestamp}.md` - Generated post outlines
+
 ## Subagents
 
 ### content-deconstructor
@@ -99,7 +135,9 @@ Creates well-structured, verifiable prompts for content creation.
 ├── /.claude/
 │   ├── /commands/
 │   │   ├── swipe-file-generator.md
-│   │   └── content-draft-generator.md
+│   │   ├── content-draft-generator.md
+│   │   ├── youtube-title-generator.md
+│   │   └── content-ideas-generator.md
 │   └── /subagents/
 │       ├── content-deconstructor.md
 │       ├── content-anatomy-generator.md
@@ -114,12 +152,21 @@ Creates well-structured, verifiable prompts for content creation.
 ├── /content-context/                    # Context requirements
 ├── /content-meta-prompt/                # Generated meta prompts
 ├── /content-draft/                      # Final content draft variations
+├── /content-ideas/                      # Post outline generation
+│   └── ideas-{timestamp}.md
+├── /youtube-title/                      # YouTube title generation
+│   ├── reference-titles.md
+│   └── titles-{timestamp}.md
 ├── /specs/
 │   ├── swipe-file-generator-command-spec.md
-│   └── content-draft-generator-command-spec.md
+│   ├── content-draft-generator-command-spec.md
+│   ├── youtube-title-generator-command-spec.md
+│   └── content-ideas-generator-command-spec.md
 └── /todos/
     ├── swipe-file-generator-implementation.md
-    └── content-draft-generator-implementation.md
+    ├── content-draft-generator-implementation.md
+    ├── youtube-title-generator-implementation.md
+    └── content-ideas-generator-implementation.md
 ```
 
 ## Key Files
