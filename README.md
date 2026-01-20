@@ -16,7 +16,7 @@ So naturally, I did what any reasonable person would do: I turned it into a Clau
 
 - **[Greg Isenberg](https://www.ideabrowser.com/)** — Conducted the interview that started this rabbit hole. Also created [a downloadable guide](https://www.gregisenberg.com/content-engine) if you want the source material.
 
-- **[Vincent Chan](http://x.com/VincentChan)** — That's me. I just wired it all together with Claude Code, slash commands, and subagents. Standing on the shoulders of giants, etc.
+- **[Vincent Chan](http://x.com/VincentChan)** — That's me. I just wired it all together with Claude Code, slash commands, and subagents. Standing on the shoulders of giants, etc. (No affiliation with Dan or Greg—just a fan who got inspired and started building.)
 
 ## How It Works
 
