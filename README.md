@@ -2,13 +2,13 @@
 
 > Because staring at a blank page hoping for inspiration is so 2023.
 
-An Claude Code powered content creation system that helps you research, ideate, and draft content like a caffeinated content team of one. Built with Claude Code, slash commands, and subagents.
+An Claude Code powered content creation system that helps you research, ideate, and draft content like a caffeinated content team of one. Built with Claude Code and skills.
 
 ## The Origin Story
 
 I watched [this YouTube interview](https://www.youtube.com/watch?v=HhspudqFSvU&t=2s) where Greg Isenberg broke down Dan Koe's AI content workflow and my jaw hit the floor. Dan Koe—the guy whose single Twitter thread got **165 million views** (not a typo)—was sharing his actual system for creating content that resonates.
 
-So naturally, I did what any reasonable person would do: I turned it into a Claude Code project with slash commands and subagents so I could pretend I have Dan's content superpowers.
+So naturally, I did what any reasonable person would do: I turned it into a Claude Code project with skills so I could pretend I have Dan's content superpowers.
 
 ## Credits
 
@@ -16,36 +16,36 @@ So naturally, I did what any reasonable person would do: I turned it into a Clau
 
 - **[Greg Isenberg](https://www.ideabrowser.com/)** — Conducted the interview that started this rabbit hole. Also created [a downloadable guide](https://www.gregisenberg.com/content-engine) if you want the source material.
 
-- **[Vincent Chan](http://x.com/VincentChan)** — That's me. I just wired it all together with Claude Code, slash commands, and subagents. Standing on the shoulders of giants, etc. (No affiliation with Dan or Greg—just a fan who got inspired and started building.)
+- **[Vincent Chan](http://x.com/VincentChan)** — That's me. I just wired it all together with Claude Code and skills. Standing on the shoulders of giants, etc. (No affiliation with Dan or Greg—just a fan who got inspired and started building.)
 
 ## How It Works
 
-This engine uses Claude Code's slash commands to run specialized content workflows. Each command is a prompt that orchestrates subagents to do the heavy lifting.
+This engine uses Claude Code skills to run specialized content workflows. Each skill is a prompt that orchestrates the heavy lifting.
 
-### The Commands
+### The Skills
 
-Commands are organized by stage in the content creation process:
+Skills are organized by stage in the content creation process:
 
 #### Discovery Stage
 *"Find the genius you didn't know you had"*
 
-| Command | What It Does |
-|---------|--------------|
+| Skill | What It Does |
+|-------|--------------|
 | `/creative-thought-partner` | Conversational partner that reveals hidden brilliance in your ideas through paradox hunting, pattern spotting, and naming unnamed concepts |
 
 #### Research Stage
 *"Know thy audience, know thy swipe file"*
 
-| Command | What It Does |
-|---------|--------------|
+| Skill | What It Does |
+|-------|--------------|
 | `/swipe-file-generator` | Analyzes high-performing content from URLs and builds a swipe file of patterns, hooks, and psychological triggers |
 | `/content-ideas-generator` | Extracts 5 structured post outlines from your reference material (newsletters, scripts, notes, journal entries) |
 
 #### Ideation Stage
 *"Turn research into something people actually want to read"*
 
-| Command | What It Does |
-|---------|--------------|
+| Skill | What It Does |
+|-------|--------------|
 | `/content-draft-generator` | Takes reference content, analyzes it, asks you context questions, then generates 3 variations of your new content |
 | `/youtube-title-generator` | Generates 30 YouTube title ideas from your content concept using proven formulas and psychological triggers |
 | `/tweet-ideas-generator` | Generates 60 high-impact tweet ideas from reference content across 5 categories (harsh advice, quotes, pain points, counterintuitive truths, key insights) |
@@ -92,7 +92,7 @@ Commands are organized by stage in the content creation process:
    ```
    Feed it any reference material and get 60 scroll-stopping tweet ideas organized by category.
 
-3. **Follow the prompts** — each command will ask for input and guide you through the process
+3. **Follow the prompts** — each skill will ask for input and guide you through the process
 
 4. **Find your output** in the corresponding folder:
    - `/creative-thoughts/` — Session transcripts with breakthroughs
@@ -107,15 +107,24 @@ Commands are organized by stage in the content creation process:
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   ├── /commands/          # Slash commands live here
-│   └── /subagents/         # Specialized AI workers
+│   └── /skills/            # Skills with co-located subagents
+│       ├── swipe-file-generator/
+│       │   ├── SKILL.md
+│       │   └── subagents/
+│       ├── content-draft-generator/
+│       │   ├── SKILL.md
+│       │   └── subagents/
+│       ├── youtube-title-generator/
+│       ├── content-ideas-generator/
+│       ├── creative-thought-partner/
+│       └── tweet-ideas-generator/
 ├── /creative-thoughts/     # Thought partner sessions
 ├── /swipe-file/            # Research output
 ├── /content-ideas/         # Post outlines
 ├── /content-draft/         # Generated drafts
 ├── /youtube-title/         # Title ideas
 ├── /tweet-ideas/           # Tweet ideas
-├── /specs/                 # Command specifications
+├── /specs/                 # Skill specifications
 └── /todos/                 # Implementation notes
 ```
 
