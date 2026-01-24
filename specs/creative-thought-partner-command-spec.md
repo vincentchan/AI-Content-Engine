@@ -6,9 +6,9 @@ A conversational creative thought partner that helps users discover unique persp
 
 ## Components
 
-### 1. `/creative-thought-partner` Slash Command
+### 1. `/creative-thought-partner` Skill
 
-**Location:** `/.claude/commands/creative-thought-partner.md`
+**Location:** `/.claude/skills/creative-thought-partner/SKILL.md`
 
 **Purpose:** Engage users in a guided conversation to uncover original insights, novel concepts, unique strategies, and powerful paradoxes from their own responses—for writing, content creation, product development, or any creative endeavor.
 
@@ -19,8 +19,9 @@ A conversational creative thought partner that helps users discover unique persp
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   └── /commands/
-│       └── creative-thought-partner.md
+│   └── /skills/
+│       └── creative-thought-partner/
+│           └── SKILL.md
 ├── /creative-thoughts/
 │   └── session-{timestamp}.md            # Conversation transcripts with breakthroughs
 └── /specs/
@@ -390,7 +391,7 @@ Users can redirect the conversation at any time:
 
 ### Files to Create
 
-- [ ] `/.claude/commands/creative-thought-partner.md`
+- [x] `/.claude/skills/creative-thought-partner/SKILL.md`
 
 ### Folders to Create
 

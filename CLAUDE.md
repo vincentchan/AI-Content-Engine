@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 AI-Content-Engine - A system for analyzing high-performing content to study structure, psychological patterns, and ideas. The engine deconstructs content from URLs and compiles insights into a continuously refined swipe file document.
 
-## Commands
+## Skills
 
 ### /swipe-file-generator
 
@@ -18,7 +18,7 @@ Analyzes high-performing content from URLs and builds a swipe file.
 3. Fetch and analyze each URL using the content-deconstructor subagent
 4. Append analyses to `/swipe-file/swipe-file.md`
 
-**Location:** `/.claude/commands/swipe-file-generator.md`
+**Location:** `/.claude/skills/swipe-file-generator/SKILL.md`
 
 ### /content-draft-generator
 
@@ -32,7 +32,7 @@ Generates new content drafts based on reference content analysis.
 5. Generate and execute a meta prompt for draft creation
 6. Produce 3 variations of your new content
 
-**Location:** `/.claude/commands/content-draft-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/SKILL.md`
 
 **Output Folders:**
 - `/content-breakdown/` - Deconstructed reference content
@@ -52,7 +52,7 @@ Generates compelling YouTube title ideas from content concepts.
 4. Generate 10 creative titles based on direct response marketing principles
 5. Save all 30 titles with analysis to timestamped file
 
-**Location:** `/.claude/commands/youtube-title-generator.md`
+**Location:** `/.claude/skills/youtube-title-generator/SKILL.md`
 
 **Output Folder:** `/youtube-title/`
 
@@ -70,7 +70,7 @@ Generates structured post outlines from reference materials for wisdom-style soc
 3. Generate structured outlines with examples, objections, and actionable steps
 4. Save outlines to timestamped file
 
-**Location:** `/.claude/commands/content-ideas-generator.md`
+**Location:** `/.claude/skills/content-ideas-generator/SKILL.md`
 
 **Output Folder:** `/content-ideas/`
 
@@ -88,7 +88,7 @@ A conversational creative thought partner that reveals hidden brilliance in your
 4. Crystallize and name your unique frameworks
 5. Export full session with narrative arc and transcript
 
-**Location:** `/.claude/commands/creative-thought-partner.md`
+**Location:** `/.claude/skills/creative-thought-partner/SKILL.md`
 
 **Output Folder:** `/creative-thoughts/`
 
@@ -106,7 +106,7 @@ Generates 60 high-impact tweet ideas from reference content across 5 categories.
 4. Generate 10 creative wildcard tweets
 5. Save all 60 ideas with sources and explanations
 
-**Location:** `/.claude/commands/tweet-ideas-generator.md`
+**Location:** `/.claude/skills/tweet-ideas-generator/SKILL.md`
 
 **Output Folder:** `/tweet-ideas/`
 
@@ -115,11 +115,15 @@ Generates 60 high-impact tweet ideas from reference content across 5 categories.
 
 ## Subagents
 
+Subagents are co-located with their parent skills in `./subagents/` directories.
+
 ### content-deconstructor
 
 Analyzes individual pieces of content to extract recreatable patterns and insights.
 
-**Location:** `/.claude/subagents/content-deconstructor.md`
+**Locations:**
+- `/.claude/skills/swipe-file-generator/subagents/content-deconstructor.md`
+- `/.claude/skills/content-draft-generator/subagents/content-deconstructor.md`
 
 **Analyzes:**
 - Structural breakdown (hooks, flow, organization, CTA)
@@ -132,7 +136,7 @@ Analyzes individual pieces of content to extract recreatable patterns and insigh
 
 Synthesizes multiple content breakdowns into a comprehensive guide.
 
-**Location:** `/.claude/subagents/content-anatomy-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/subagents/content-anatomy-generator.md`
 
 **Generates:**
 - Core structure blueprint
@@ -145,7 +149,7 @@ Synthesizes multiple content breakdowns into a comprehensive guide.
 
 Analyzes content guides to determine required user context.
 
-**Location:** `/.claude/subagents/content-context-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/subagents/content-context-generator.md`
 
 **Generates:**
 - Essential context questions (topic, audience, goals, voice)
@@ -156,7 +160,7 @@ Analyzes content guides to determine required user context.
 
 Creates well-structured, verifiable prompts for content creation.
 
-**Location:** `/.claude/subagents/meta-prompt-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/subagents/meta-prompt-generator.md`
 
 **Features:**
 - Task decomposition
@@ -169,18 +173,32 @@ Creates well-structured, verifiable prompts for content creation.
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   ├── /commands/
-│   │   ├── swipe-file-generator.md
-│   │   ├── content-draft-generator.md
-│   │   ├── youtube-title-generator.md
-│   │   ├── content-ideas-generator.md
-│   │   ├── creative-thought-partner.md
-│   │   └── tweet-ideas-generator.md
-│   └── /subagents/
-│       ├── content-deconstructor.md
-│       ├── content-anatomy-generator.md
-│       ├── content-context-generator.md
-│       └── meta-prompt-generator.md
+│   └── /skills/
+│       ├── swipe-file-generator/
+│       │   ├── SKILL.md
+│       │   └── subagents/
+│       │       └── content-deconstructor.md
+│       │
+│       ├── content-draft-generator/
+│       │   ├── SKILL.md
+│       │   └── subagents/
+│       │       ├── content-deconstructor.md
+│       │       ├── content-anatomy-generator.md
+│       │       ├── content-context-generator.md
+│       │       └── meta-prompt-generator.md
+│       │
+│       ├── youtube-title-generator/
+│       │   └── SKILL.md
+│       │
+│       ├── content-ideas-generator/
+│       │   └── SKILL.md
+│       │
+│       ├── creative-thought-partner/
+│       │   └── SKILL.md
+│       │
+│       └── tweet-ideas-generator/
+│           └── SKILL.md
+│
 ├── /swipe-file/
 │   ├── swipe-file.md
 │   ├── swipe-file-sources.md

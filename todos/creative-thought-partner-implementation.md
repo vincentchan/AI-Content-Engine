@@ -14,7 +14,7 @@ Implementation checklist for the `/creative-thought-partner` command based on th
 
 ### 2. Create Command File
 
-- [x] Create `/.claude/commands/creative-thought-partner.md`
+- [x] Create `/.claude/skills/creative-thought-partner/SKILL.md`
 
 **Command file must include:**
 
@@ -99,7 +99,7 @@ A conversational creative thought partner that reveals hidden brilliance in your
 4. Crystallize and name your unique frameworks
 5. Export full session with narrative arc and transcript
 
-**Location:** `/.claude/commands/creative-thought-partner.md`
+**Location:** `/.claude/skills/creative-thought-partner/SKILL.md`
 
 **Output Folder:** `/creative-thoughts/`
 
@@ -126,7 +126,7 @@ A conversational creative thought partner that reveals hidden brilliance in your
 | File | Purpose |
 |------|---------|
 | `/specs/creative-thought-partner-command-spec.md` | Full specification |
-| `/.claude/commands/creative-thought-partner.md` | Command implementation |
+| `/.claude/skills/creative-thought-partner/SKILL.md` | Command implementation |
 | `/creative-thoughts/session-{timestamp}.md` | Generated outputs |
 | `/todos/creative-thought-partner-implementation.md` | This file |
 

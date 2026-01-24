@@ -6,9 +6,9 @@ A social media post outline generator that extracts compelling concepts from ref
 
 ## Components
 
-### 1. `/content-ideas-generator` Slash Command
+### 1. `/content-ideas-generator` Skill
 
-**Location:** `/.claude/commands/content-ideas-generator.md`
+**Location:** `/.claude/skills/content-ideas-generator/SKILL.md`
 
 **Purpose:** Generate 5 distinct, structured post outlines from user-provided reference material, focusing on counterintuitive truths, transformation arcs, and emotionally resonant insights.
 
@@ -19,8 +19,9 @@ A social media post outline generator that extracts compelling concepts from ref
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   └── /commands/
-│       └── content-ideas-generator.md
+│   └── /skills/
+│       └── content-ideas-generator/
+│           └── SKILL.md
 ├── /content-ideas/
 │   └── ideas-{timestamp}.md            # Generated post outlines
 └── /specs/
@@ -367,7 +368,7 @@ System: [Analyzes reference material]
 
 ### Files to Create
 
-- [ ] `/.claude/commands/content-ideas-generator.md`
+- [x] `/.claude/skills/content-ideas-generator/SKILL.md`
 
 ### Folders to Create
 

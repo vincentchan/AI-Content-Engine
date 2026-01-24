@@ -13,7 +13,7 @@
   - [x] Format as numbered list for easy parsing
 
 ### Command
-- [x] Create `/youtube-title-generator` slash command at `/.claude/commands/youtube-title-generator.md`
+- [x] Create `/youtube-title-generator` slash command at `/.claude/skills/youtube-title-generator/SKILL.md`
   - [x] Step 1: Prompt user for content idea/reference material
   - [x] Step 2: Analyze input for transformation promise, value props, audience benefits, timeframes, big ideas
   - [x] Step 3: Load reference titles from `/youtube-title/reference-titles.md`

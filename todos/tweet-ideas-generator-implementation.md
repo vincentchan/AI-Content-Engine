@@ -14,7 +14,7 @@ Implementation checklist for the `/tweet-ideas-generator` command based on the s
 
 ### 2. Create Command File
 
-- [x] Create `/.claude/commands/tweet-ideas-generator.md`
+- [x] Create `/.claude/skills/tweet-ideas-generator/SKILL.md`
 
 **Command file must include:**
 
@@ -122,7 +122,7 @@ Generates 60 high-impact tweet ideas from reference content.
 4. Generate 10 creative wildcard tweets
 5. Save all 60 ideas with sources and explanations
 
-**Location:** `/.claude/commands/tweet-ideas-generator.md`
+**Location:** `/.claude/skills/tweet-ideas-generator/SKILL.md`
 
 **Output Folder:** `/tweet-ideas/`
 
@@ -157,7 +157,7 @@ Generates 60 high-impact tweet ideas from reference content.
 | File | Purpose |
 |------|---------|
 | `/specs/tweet-ideas-generator-command-spec.md` | Full specification |
-| `/.claude/commands/tweet-ideas-generator.md` | Command implementation |
+| `/.claude/skills/tweet-ideas-generator/SKILL.md` | Command implementation |
 | `/tweet-ideas/tweets-{timestamp}.md` | Generated outputs |
 | `/todos/tweet-ideas-generator-implementation.md` | This file |
 

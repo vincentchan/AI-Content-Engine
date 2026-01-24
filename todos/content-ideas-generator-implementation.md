@@ -14,7 +14,7 @@ Implementation checklist for the `/content-ideas-generator` command based on the
 
 ### 2. Create Command File
 
-- [ ] Create `/.claude/commands/content-ideas-generator.md`
+- [ ] Create `/.claude/skills/content-ideas-generator/SKILL.md`
 
 **Command file must include:**
 
@@ -53,7 +53,7 @@ Generates structured post outlines from reference materials.
 3. Generate structured outlines with examples, objections, and actionable steps
 4. Save outlines to timestamped file
 
-**Location:** `/.claude/commands/content-ideas-generator.md`
+**Location:** `/.claude/skills/content-ideas-generator/SKILL.md`
 
 **Output Folder:** `/content-ideas/`
 ```
@@ -73,7 +73,7 @@ Generates structured post outlines from reference materials.
 | File | Purpose |
 |------|---------|
 | `/specs/content-ideas-generator-command-spec.md` | Full specification |
-| `/.claude/commands/content-ideas-generator.md` | Command implementation |
+| `/.claude/skills/content-ideas-generator/SKILL.md` | Command implementation |
 | `/content-ideas/ideas-{timestamp}.md` | Generated outputs |
 | `/todos/content-ideas-generator-implementation.md` | This file |
 

@@ -6,9 +6,9 @@ A YouTube title generation system that transforms content ideas, newsletter conc
 
 ## Components
 
-### 1. `/youtube-title-generator` Slash Command
+### 1. `/youtube-title-generator` Skill
 
-**Location:** `/.claude/commands/youtube-title-generator.md`
+**Location:** `/.claude/skills/youtube-title-generator/SKILL.md`
 
 **Purpose:** Generate 30 distinct, compelling YouTube title ideas (20 structured + 10 creative) based on user-provided content ideas or reference material.
 
@@ -19,8 +19,9 @@ A YouTube title generation system that transforms content ideas, newsletter conc
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   └── /commands/
-│       └── youtube-title-generator.md
+│   └── /skills/
+│       └── youtube-title-generator/
+│           └── SKILL.md
 ├── /youtube-title/
 │   ├── reference-titles.md              # Editable reference examples
 │   └── titles-{timestamp}.md            # Generated title outputs
@@ -320,8 +321,8 @@ System: [Analyzes input]
 
 ### Files to Create
 
-- [ ] `/.claude/commands/youtube-title-generator.md`
-- [ ] `/youtube-title/reference-titles.md`
+- [x] `/.claude/skills/youtube-title-generator/SKILL.md`
+- [x] `/youtube-title/reference-titles.md`
 
 ### Folders to Create
 

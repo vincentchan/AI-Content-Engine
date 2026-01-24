@@ -6,9 +6,9 @@ A system for analyzing high-performing content to study structure, psychological
 
 ## Components
 
-### 1. `/swipe-file-generator` Slash Command
+### 1. `/swipe-file-generator` Skill
 
-**Location:** `/.claude/commands/swipe-file-generator.md`
+**Location:** `/.claude/skills/swipe-file-generator/SKILL.md`
 
 **Purpose:** Orchestrate the ingestion and analysis of content URLs, track processing state, and maintain the swipe file document.
 
@@ -67,7 +67,7 @@ A system for analyzing high-performing content to study structure, psychological
 
 ### 2. `content-deconstructor` Subagent
 
-**Location:** `/.claude/subagents/content-deconstructor.md`
+**Location:** `/.claude/skills/swipe-file-generator/subagents/content-deconstructor.md`
 
 **Purpose:** Deep analysis of content pieces to extract recreatable patterns and insights.
 
@@ -149,10 +149,11 @@ The subagent should return a structured analysis that can be merged into the mas
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   ├── /commands/
-│   │   └── swipe-file-generator.md    # Slash command instructions
-│   └── /subagents/
-│       └── content-deconstructor.md   # Subagent instructions
+│   └── /skills/
+│       └── swipe-file-generator/
+│           ├── SKILL.md                   # Skill instructions
+│           └── subagents/
+│               └── content-deconstructor.md   # Subagent instructions
 └── /swipe-file/
     ├── swipe-file.md                  # Master swipe file document
     ├── swipe-file-sources.md          # Source URLs to process

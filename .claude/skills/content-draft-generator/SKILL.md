@@ -1,3 +1,9 @@
+---
+name: content-draft-generator
+description: Generates new content drafts based on reference content analysis
+disable-model-invocation: true
+---
+
 # /content-draft-generator Command
 
 You are a content draft generator that orchestrates an end-to-end pipeline for creating new content based on reference examples. Your job is to analyze reference content, synthesize insights, gather context, generate a meta prompt, and execute it to produce draft content variations.
@@ -10,10 +16,10 @@ You are a content draft generator that orchestrates an end-to-end pipeline for c
 - **Meta Prompts:** `/content-meta-prompt/`
 - **Content Drafts:** `/content-draft/`
 - **Subagents:**
-  - `/.claude/subagents/content-deconstructor.md`
-  - `/.claude/subagents/content-anatomy-generator.md`
-  - `/.claude/subagents/content-context-generator.md`
-  - `/.claude/subagents/meta-prompt-generator.md`
+  - `./subagents/content-deconstructor.md`
+  - `./subagents/content-anatomy-generator.md`
+  - `./subagents/content-context-generator.md`
+  - `./subagents/meta-prompt-generator.md`
 
 ## Workflow Overview
 
@@ -63,7 +69,7 @@ You are a content draft generator that orchestrates an end-to-end pipeline for c
    ```
    Task tool with:
    - subagent_type: "general-purpose"
-   - prompt: Include ALL fetched content and instruct to follow /.claude/subagents/content-deconstructor.md
+   - prompt: Include ALL fetched content and instruct to follow ./subagents/content-deconstructor.md
    ```
 3. Generate timestamp: `YYYY-MM-DD-HHmmss` format
 4. Save the combined breakdown to `/content-breakdown/breakdown-{timestamp}.md`
@@ -75,7 +81,7 @@ You are a content draft generator that orchestrates an end-to-end pipeline for c
    ```
    Task tool with:
    - subagent_type: "general-purpose"
-   - prompt: Include the breakdown from Step 2 and instruct to follow /.claude/subagents/content-anatomy-generator.md
+   - prompt: Include the breakdown from Step 2 and instruct to follow ./subagents/content-anatomy-generator.md
    ```
 2. Save the anatomy guide to `/content-anatomy/anatomy-{timestamp}.md`
 3. Report to user: "✓ Content anatomy guide saved to /content-anatomy/anatomy-{timestamp}.md"
@@ -86,7 +92,7 @@ You are a content draft generator that orchestrates an end-to-end pipeline for c
    ```
    Task tool with:
    - subagent_type: "general-purpose"
-   - prompt: Include the anatomy guide from Step 3 and instruct to follow /.claude/subagents/content-context-generator.md
+   - prompt: Include the anatomy guide from Step 3 and instruct to follow ./subagents/content-context-generator.md
    ```
 2. Save the context requirements to `/content-context/context-{timestamp}.md`
 3. Report to user: "✓ Context requirements saved to /content-context/context-{timestamp}.md"

@@ -12,12 +12,12 @@
 - [x] Create `/content-draft/` folder
 
 ### Subagents
-- [x] Create `content-anatomy-generator` subagent at `/.claude/subagents/content-anatomy-generator.md`
-- [x] Create `content-context-generator` subagent at `/.claude/subagents/content-context-generator.md`
-- [x] Create `meta-prompt-generator` subagent at `/.claude/subagents/meta-prompt-generator.md`
+- [x] Create `content-anatomy-generator` subagent at `/.claude/skills/content-draft-generator/subagents/content-anatomy-generator.md`
+- [x] Create `content-context-generator` subagent at `/.claude/skills/content-draft-generator/subagents/content-context-generator.md`
+- [x] Create `meta-prompt-generator` subagent at `/.claude/skills/content-draft-generator/subagents/meta-prompt-generator.md`
 
 ### Command
-- [x] Create `/content-draft-generator` slash command at `/.claude/commands/content-draft-generator.md`
+- [x] Create `/content-draft-generator` slash command at `/.claude/skills/content-draft-generator/SKILL.md`
   - [x] Step 1: URL collection (up to 5 URLs)
   - [x] Step 2: Content deconstruction via existing subagent
   - [x] Step 3: Anatomy generation via new subagent

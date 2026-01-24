@@ -6,9 +6,9 @@ A content draft generation system that analyzes reference content, synthesizes i
 
 ## Components
 
-### 1. `/content-draft-generator` Slash Command
+### 1. `/content-draft-generator` Skill
 
-**Location:** `/.claude/commands/content-draft-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/SKILL.md`
 
 **Purpose:** Orchestrate the end-to-end content draft generation pipeline from reference analysis to final draft creation.
 
@@ -108,9 +108,9 @@ Phase 2 - Content Writing:
 
 ### 2. `content-deconstructor` Subagent
 
-**Location:** `/.claude/subagents/content-deconstructor.md`
+**Location:** `/.claude/skills/content-draft-generator/subagents/content-deconstructor.md`
 
-**Note:** This subagent already exists and is reused from the swipe-file-generator system.
+**Note:** This subagent is co-located with this skill (also exists in swipe-file-generator).
 
 **Purpose:** Deep analysis of content pieces to extract recreatable patterns and insights.
 
@@ -125,7 +125,7 @@ Phase 2 - Content Writing:
 
 ### 3. `content-anatomy-generator` Subagent
 
-**Location:** `/.claude/subagents/content-anatomy-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/subagents/content-anatomy-generator.md`
 
 **Purpose:** Synthesize multiple content breakdowns into a single comprehensive guide that can be used as a blueprint for creating new content.
 
@@ -220,7 +220,7 @@ Phase 2 - Content Writing:
 
 ### 4. `content-context-generator` Subagent
 
-**Location:** `/.claude/subagents/content-context-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/subagents/content-context-generator.md`
 
 **Purpose:** Analyze the comprehensive guide and determine what information is needed from the user to create effective new content.
 
@@ -289,7 +289,7 @@ This document outlines the information needed from you to create content followi
 
 ### 5. `meta-prompt-generator` Subagent
 
-**Location:** `/.claude/subagents/meta-prompt-generator.md`
+**Location:** `/.claude/skills/content-draft-generator/subagents/meta-prompt-generator.md`
 
 **Purpose:** Generate well-structured, verifiable, low-hallucination prompts for content creation use cases.
 
@@ -380,23 +380,23 @@ When invoked, the meta-prompt-generator opens with:
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   ├── /commands/
-│   │   ├── swipe-file-generator.md
-│   │   └── content-draft-generator.md      # NEW
-│   └── /subagents/
-│       ├── content-deconstructor.md        # Existing
-│       ├── content-anatomy-generator.md    # NEW
-│       ├── content-context-generator.md    # NEW
-│       └── meta-prompt-generator.md        # NEW
-├── /content-breakdown/                      # NEW
+│   └── /skills/
+│       └── content-draft-generator/
+│           ├── SKILL.md
+│           └── subagents/
+│               ├── content-deconstructor.md
+│               ├── content-anatomy-generator.md
+│               ├── content-context-generator.md
+│               └── meta-prompt-generator.md
+├── /content-breakdown/
 │   └── breakdown-{timestamp}.md
-├── /content-anatomy/                        # NEW
+├── /content-anatomy/
 │   └── anatomy-{timestamp}.md
-├── /content-context/                        # NEW
+├── /content-context/
 │   └── context-{timestamp}.md
-├── /content-meta-prompt/                    # NEW
+├── /content-meta-prompt/
 │   └── meta-prompt-{timestamp}.md
-├── /content-draft/                          # NEW
+├── /content-draft/
 │   └── draft-{timestamp}.md
 └── /swipe-file/
     └── ...
@@ -482,10 +482,11 @@ System: === PHASE 2: CONTENT WRITING ===
 
 ### Files to Create
 
-- [ ] `/.claude/commands/content-draft-generator.md`
-- [ ] `/.claude/subagents/content-anatomy-generator.md`
-- [ ] `/.claude/subagents/content-context-generator.md`
-- [ ] `/.claude/subagents/meta-prompt-generator.md`
+- [x] `/.claude/skills/content-draft-generator/SKILL.md`
+- [x] `/.claude/skills/content-draft-generator/subagents/content-deconstructor.md`
+- [x] `/.claude/skills/content-draft-generator/subagents/content-anatomy-generator.md`
+- [x] `/.claude/skills/content-draft-generator/subagents/content-context-generator.md`
+- [x] `/.claude/skills/content-draft-generator/subagents/meta-prompt-generator.md`
 
 ### Folders to Create
 

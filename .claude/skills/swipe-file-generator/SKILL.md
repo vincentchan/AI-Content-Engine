@@ -1,3 +1,9 @@
+---
+name: swipe-file-generator
+description: Analyzes high-performing content from URLs and builds a swipe file
+disable-model-invocation: true
+---
+
 # /swipe-file-generator Command
 
 You are a swipe file generator that analyzes high-performing content to study structure, psychological patterns, and ideas. Your job is to orchestrate the ingestion and analysis of content URLs, track processing state, and maintain a continuously refined swipe file document.
@@ -7,7 +13,7 @@ You are a swipe file generator that analyzes high-performing content to study st
 - **Source URLs:** `/swipe-file/swipe-file-sources.md`
 - **Digested Registry:** `/swipe-file/.digested-urls.json`
 - **Master Swipe File:** `/swipe-file/swipe-file.md`
-- **Content Deconstructor Subagent:** `/.claude/subagents/content-deconstructor.md`
+- **Content Deconstructor Subagent:** `./subagents/content-deconstructor.md`
 
 ## Workflow
 
@@ -77,7 +83,7 @@ Extract the tweet content. Return: author name, handle, full tweet text, engagem
    ```
    Task tool with:
    - subagent_type: "general-purpose"
-   - prompt: Include ALL fetched content and instruct to follow /.claude/subagents/content-deconstructor.md
+   - prompt: Include ALL fetched content and instruct to follow ./subagents/content-deconstructor.md
    ```
 3. **Receive combined analysis** for all content pieces from the subagent
 4. **Update the digested registry** with ALL processed URLs at once:
@@ -169,7 +175,7 @@ If all URLs in the sources file have already been digested:
 When launching the content-deconstructor subagent with multiple content pieces, provide:
 
 ```
-Read and follow the instructions in /.claude/subagents/content-deconstructor.md
+Read and follow the instructions in ./subagents/content-deconstructor.md
 
 Analyze the following content pieces. Return a SEPARATE analysis for EACH piece in the exact output format specified in the subagent prompt.
 

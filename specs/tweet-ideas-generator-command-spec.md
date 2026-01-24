@@ -6,9 +6,9 @@ A social media short statement generator that extracts compelling concepts from 
 
 ## Components
 
-### 1. `/tweet-ideas-generator` Slash Command
+### 1. `/tweet-ideas-generator` Skill
 
-**Location:** `/.claude/commands/tweet-ideas-generator.md`
+**Location:** `/.claude/skills/tweet-ideas-generator/SKILL.md`
 
 **Purpose:** Generate 60 engaging short-form statements from user-provided reference material, organized across 5 categories plus 10 creative wildcards, each under 280 characters.
 
@@ -19,8 +19,9 @@ A social media short statement generator that extracts compelling concepts from 
 ```
 /AI-Content-Engine/
 ├── /.claude/
-│   └── /commands/
-│       └── tweet-ideas-generator.md
+│   └── /skills/
+│       └── tweet-ideas-generator/
+│           └── SKILL.md
 ├── /tweet-ideas/
 │   └── tweets-{timestamp}.md            # Generated tweet ideas
 └── /specs/
@@ -435,7 +436,7 @@ System: [Analyzes reference material]
 
 ### Files to Create
 
-- [ ] `/.claude/commands/tweet-ideas-generator.md`
+- [x] `/.claude/skills/tweet-ideas-generator/SKILL.md`
 
 ### Folders to Create
 
